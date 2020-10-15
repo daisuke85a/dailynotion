@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  front:
+    build:
+      context: ./front/app
+      args:
+        WORKDIR: $WORKDIR
+        CONTAINER_PORT: $CONTAINER_PORT
+    command: yarn dev
+    volumes:
+      - ./front/app:/$WORKDIR
+    ports:
+      - "$FRONT_PORT:$CONTAINER_PORT"
