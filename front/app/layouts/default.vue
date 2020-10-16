@@ -1,8 +1,18 @@
 <template>
   <div>
+    <Sidebar></Sidebar>
     <Nuxt />
   </div>
 </template>
+<script lang="ts">
+import Sidebar from '@/components/Sidebar.vue'
+
+export default {
+  components: {
+    Sidebar
+  }
+}
+</script>
 
 <style>
 html {
