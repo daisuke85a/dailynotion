@@ -56,25 +56,26 @@
   </div>
 </template>
 <script lang="ts">
+import Vue from 'vue';
 import { createPopper } from '@popperjs/core';
-export default {
+export default Vue.extend({
   data() {
     return {
-      dropdownPopoverShow: false
+      dropdownPopoverShow: false as boolean
     };
   },
   methods: {
-    toggleDropdown: function(event) {
+    toggleDropdown: function(event :Event) {
       event.preventDefault();
       if (this.dropdownPopoverShow) {
         this.dropdownPopoverShow = false;
       } else {
         this.dropdownPopoverShow = true;
-        createPopper(this.$refs.btnDropdownRef, this.$refs.popoverDropdownRef, {
+        createPopper(this.$refs.btnDropdownRef as Element, this.$refs.popoverDropdownRef as HTMLElement, {
           placement: "bottom-end"
         });
       }
     }
   }
-};
+});
 </script>

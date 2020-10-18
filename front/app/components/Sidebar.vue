@@ -110,16 +110,18 @@
   </nav>
 </template>
 <script lang="ts">
+import Vue from 'vue';
 import NotificationDropdownComponent from "./NotificationDropdown.vue";
 import UserDropdownComponent from "./UserDropdown.vue";
-export default {
+
+export default Vue.extend({
   data() {
     return {
-      collapseShow: "hidden"
+      collapseShow: "hidden" as string
     };
   },
   methods: {
-    toggleCollapseShow: function(classes) {
+    toggleCollapseShow: function(classes :string) {
       this.collapseShow = classes;
     }
   },
@@ -127,5 +129,5 @@ export default {
     NotificationDropdownComponent,
     UserDropdownComponent
   }
-};
+});
 </script>
