@@ -16,7 +16,8 @@
     "@nuxtjs/axios": "^5.12.2",
     "@popperjs/core": "^2.5.3",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "tiptap": "^1.30.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.6",
